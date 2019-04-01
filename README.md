@@ -3,6 +3,12 @@ Group University Project, with the goal to develop a software that acts as an AT
 
 # About
 ...
+
+# Contributors
+* Brian -
+* Sebastian -
+* Kaeleb -
+
 # Dependencies 
 ...
 # Result
