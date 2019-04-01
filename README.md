@@ -2,7 +2,6 @@
 Group University Project, with the goal to develop a software that acts as an ATM machine with OOP
 
 # About
-...
 
 # Contributors
 * Brian -
@@ -10,7 +9,10 @@ Group University Project, with the goal to develop a software that acts as an AT
 * Kaeleb -
 
 # Dependencies 
-...
+* C++ IDE
+* iostream
+* iomanip
+
 # Result
 ...
 
