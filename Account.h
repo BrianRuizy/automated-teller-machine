@@ -1,4 +1,5 @@
-#pragma once
+#ifndef ACCOUNT_H
+#define ACOUNT_H
 
 #include <iostream>
 #include <string>
