@@ -5,9 +5,9 @@ Group University Project, with the goal to develop a software that acts as an AT
 The broader scope of this project is to practice and showcase our understanding of Object Oriented Programming. More specifically, the use of encapsulation and base class inheritence. We aim at creating an ATM software which has the following features to both a 'Savings' and a 'Checking' account: *Deposit, Widthdraw, and CheckBalance*. And, the use of OOP provides layered security for the users information.
 
 # Contributors
-* Brian - 
-* Sebastian -
-* Kaeleb -
+* Brian - Lead Programmer, helped setup class' structure
+* Sebastian - Programmer, helped develop 'main' user interface
+* Kaeleb - Programmer, helped develop implementation files
 
 # Dependencies 
 * C++ IDE
