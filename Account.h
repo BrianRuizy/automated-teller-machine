@@ -1,7 +1,5 @@
 #ifndef ACCOUNT_H
 #define ACOUNT_H
-
-#include <iostream>
 #include <string>
 using namespace std;
 
@@ -11,16 +9,13 @@ private:
 	string firstName;
 	string lastName;
 	int accNumber;
-	double balance; 
-
+	
 public:
-	Account();
-	~Account();
+	void setAccountName(string firstname);
+	void setAccountName(string lastname);
 
-	void getBalance(double bal);
-	void setBalance(double bal);
-
-	void deposit(double depAmount);
-	void widthdraw(double widAmount);
+	void setAccountNumber(int accno);
+	
+	
 };
-
+#endif

@@ -1,9 +1,16 @@
-#pragma once
+#ifndef CHECKINGS_H
+#define CHECKINGS_H
 #include "Account.h"
-class Checkings : public Account
+
+
+
+class Checkings : public Account //inheritence from base clas 'account'
 {
+private:
+	double balance;
 public:
-	Checkings();
-	~Checkings();
+	void setBalance(double depositt);
+	double getBalance() const;
 };
+#endif
 
