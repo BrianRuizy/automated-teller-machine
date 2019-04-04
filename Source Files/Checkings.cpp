@@ -4,7 +4,7 @@
 
 void Checkings:: setBalance(double depositt)
 {
-	balance = depositt;
+	balance = balance + depositt;
 }
 
 
