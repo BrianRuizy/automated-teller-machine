@@ -1,3 +1,12 @@
+/* 
+TEAM MEMBERS: 
+
+Brian Ruiz 
+Kaeleb Tekan
+Sebastian Maya
+*/
+
+
 #include <iostream>
 #include <string>
 #include "Account.h"
