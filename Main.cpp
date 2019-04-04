@@ -6,11 +6,37 @@
 
 using namespace std; 
 
+
+int mainMenu() {
+
+	int choice = 0;
+
+	cout << "\n-----------------------------" << endl;
+	cout << "|What would you like to do?:|" << endl;
+	cout << "-----------------------------" << endl;
+	cout << "| 1. Deposit                 |" << endl;
+	cout << "| 2. Withdraw                |" << endl;
+	cout << "| 3. Check Balance           |" << endl;
+	cout << "| 4. Account Transfer        |" << endl;
+	cout << "| 5. [Exit]                  |" << endl;
+	cout << "-----------------------------" << endl;
+
+	cin >> choice;
+	return choice; 
+}
+
+
 int main() 
 {
-    /* Array on objects 
-    int size = 10;
 
+	cout << "---------------------------" << endl;
+	cout << "|   welcome 'name.'       |" << endl;
+	cout << "---------------------------" << endl;
+
+	//If creating more than 1 bank accounts, 
+	//in this program we will only run with one account.
+    /* Array on objects  
+    int size = 10;
     string accNumber[10]; 
     Checkings Arr[size];
     Savings Arrr[size]; */
@@ -19,40 +45,37 @@ int main()
     Checkings checkObj; 
     Savings savObj; 
 
-    cout << "----------------------" << endl;
-    cout << "welcome 'first_name.'" << endl;
-    cout << "----------------------" << endl;
+	bool isNotFinished = true;
 
-    int choice; 
+	do {
 
-    cout << "What would you like to do?: " << endl;
-    cout << "1. Deposit" << endl; 
-    cout << "2. Withdraw" << endl;
-    cout << "3. Check Balance" << endl; 
-    cout << "4. Account Transfer" << endl;
+		switch (mainMenu()) {
 
-    cin >> choice;
+			case 1:
+				break;
 
-    switch (choice){
+			case 2:
+				break;
 
-    case 1:
-    
-        break; 
+			case 3:
+				break;
 
-    case 2: 
+			case 4:
+				break;
 
-        break;
+			case 5:
+				cout << "Thank you for Choosing Chase Fargo of America." << endl;
+				break;
 
-    case 3:
+			default:
+				cout << "Invalid choice!" << endl;
+				break;
+		}
 
-        break;	
-      
-    case 4: 
+	} while (isNotFinished);
 
-        break;
 
-    }
-
+	system("pause");
 	return 0;
 
 }
