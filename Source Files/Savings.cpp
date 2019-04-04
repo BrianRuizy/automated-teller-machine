@@ -4,7 +4,7 @@
 
 void Savings::setSavingsBalance(double depositt)
 {
-	balancee = depositt;
+	balancee = balancee + depositt;
 }
 
 
