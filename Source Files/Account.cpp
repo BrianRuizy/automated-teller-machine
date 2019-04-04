@@ -1,13 +1,10 @@
 #include "Account.h"
 
-void  Account::setAccountName(string firstname)
+void  Account::setAccountName(string firstname, string lastname)
 {
-	firstName = firstName;
-
-}
-void Account::setAccountName(string lastname)
-{
+	firstName = firstname;
 	lastName = lastname;
+
 }
 
 void Account::setAccountNumber(int accno)
