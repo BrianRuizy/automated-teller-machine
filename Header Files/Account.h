@@ -1,21 +1,17 @@
-#ifndef ACCOUNT_H
-#define ACOUNT_H
+#pragma once
 #include <string>
 using namespace std;
 
 class Account
 {
-private:
-	string firstName;
-	string lastName;
-	int accNumber;
-	
-public:
-	void setAccountName(string firstname);
-	void setAccountName(string lastname);
+	private:
+		string firstName, lastName;
+		int accNumber;
 
-	void setAccountNumber(int accno);
+	public:
+		void setAccountName(string firstname, string lastname);
+		void setAccountNumber(int accno);
 	
 	
 };
-#endif
+
