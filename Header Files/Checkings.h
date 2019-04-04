@@ -4,9 +4,12 @@
 class Checkings : public Account //inheritence from base class 'account'
 {
 	private:
-		double balance;
+		double c_balance = 0;
+
 	public:
-		void setBalance(double depositt);
+		void setBalance(double deposit);
 		double getBalance() const;
+		void setWithdraw();
+		void setDeposit();
 };
 
