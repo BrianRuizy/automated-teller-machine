@@ -15,3 +15,4 @@ public:
 	double getTransfer();
 
 };
+
