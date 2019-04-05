@@ -1,3 +1,4 @@
+
 #include "Checkings.h"
 #include <iostream>
 
@@ -14,8 +15,8 @@ double Checkings::getBalance() const
 
 void Checkings::setWithdraw()
 {
-	int wdraw = 0;
-	cout << "Enter withdrawal amount: ";
+	double wdraw = 0;
+	cout << "Enter withdrawal amount: $";
 	cin >> wdraw;
 
 	if (c_balance >= wdraw) {
@@ -30,17 +31,17 @@ void Checkings::setWithdraw()
 
 void Checkings::setDeposit()
 {
-	int dep = 0;
-	cout << "Enter deposit amount: ";
+	double dep = 0;
+	cout << "Enter deposit amount: $";
 	cin >> dep;
 	c_balance = c_balance + dep;
-	cout << "Your updated Checkings balance is: $" << getBalance() << endl;
+	cout << "Your updated Checkings balance is: $" << c_balance << endl;
 }
 
 double Checkings::getTransfer() //returns transfer ammount
 {
-	int wdraw = 0;
-	cout << "Enter transfer amount: ";
+	double wdraw = 0;
+	cout << "Enter transfer amount: $";
 	cin >> wdraw;
 
 	if (c_balance >= wdraw) {
