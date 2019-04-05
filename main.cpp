@@ -6,9 +6,6 @@ Kaeleb Teka
 Sebastian Maya
 */
 
-/* 
-Group University Project, for CS 3304 Algorithms & Data Structures,
-with the goal to develop a software that acts as an ATM machine with OOP. */
 
 #include <iostream>
 #include <string>
@@ -45,7 +42,7 @@ int main()
 	Checkings checkObj;
 	Savings savObj;
 
-	accObj.login(); //call for login page
+	//accObj.login(); //call for login page
 
 	accObj.setAccountName("Moiz", "Ahmed"); // Or whatever predefined name
 	string fullName = accObj.getAccountName();
@@ -109,7 +106,7 @@ int main()
 				break;
 			}
 			// call widthdraw
-
+			break;
 		case 3:
 	
 			// call to check balance
@@ -118,58 +115,73 @@ int main()
 			cout << "-------------------------------------------------" << endl;
 			cout << "| 1. Checking                                   |" << endl;
 			cout << "| 2. Savings                                    |" << endl;
+			//cout << "| 3. Checking & Savings                         |" << endl;
 			cout << "-------------------------------------------------" << endl;
 			
 			cin >> accountChoice;
 			switch (accountChoice)
 			{
-				case 1: 
-					checkObj.dislpayCheckingsBalance(); // gets balance for checkings account
-					break; 
+			case 1: 
+				cout << "Your current Checking balance is $" << checkObj.getBalance(); // gets balance for checkings account
+				break; 
 
-				case 2: 
-					savObj.displaySavingsBalance(); // gets balance for savings account
-					break;
+			case 2: 
+				cout << "Your current Savings balance is $" << savObj.getSavingsBalance(); // gets balance for savings account
+				break;
 
-				default: 
-					cout << "Invalid choice! Please select again." << endl; 
-					break; 
+			//case 3: 
+				//checkObj.getAccountBalance(); 
+			default: 
+				cout << "Invalid choice! Please select again." << endl; 
+				break; 
 
 			}
 
-			
-		case 4: // call for transfer
+			break;
+
+			/*
+			cout << "-------------------------------------------------" << endl;
+			cout << "|			Your balance is: $ 					 |" << endl;
+			cout << "-------------------------------------------------" << endl;
+			break;
+			*/
+
+			// call for transfer
+		case 4:
 
 			cout << "-------------------------------------------------" << endl;
-			cout << "|   Select account you wish to transer from.    |" << endl;
+			cout << "| Select account you wish to transer from.       |" << endl;
 			cout << "-------------------------------------------------" << endl;
-			cout << "| 1. Checkings to Savings                       |" << endl;
-			cout << "| 2. Savings to Checkings                       |" << endl;
+			cout << "| 1. Checkings to Savings                                   |" << endl;
+			cout << "| 2. Savings to Checkings                                    |" << endl;
 			cout << "-------------------------------------------------" << endl << endl;
 
 			cin >> accountChoice;
 			switch (accountChoice)
 			{
-				case 1: 
-				{
-					double depositTOsav = checkObj.getTransfer(); // Withdraw ammount from Checking
-					savObj.setSavingsBalance(depositTOsav); // Deposit ammount to Savings
-					break;
-				}
-				case 2: 
-				{
-					double depositTOcheck = savObj.getTransfer(); // Withdraw ammount from Savings
-					checkObj.setBalance(depositTOcheck); // Deposit ammount to Checkings
-					break;
-				}
-				default: 
-					cout << " Invalid choice! Please select again."<< endl; 
-					break;
-				}
+			case 1: 
+			{
+				double depositTOsav = checkObj.getTransfer(); // Withdraw ammount from Checking
+				savObj.setSavingsBalance(depositTOsav); // Deposit ammount to Savings
+				break;
+			}
+			case 2: 
+			{
+				double depositTOcheck = savObj.getTransfer(); // Withdraw ammount from Savings
+				checkObj.setBalance(depositTOcheck); // Deposit ammount to Checkings
+				break;
+			}
+			default: 
+				cout << " Invalid choice! Please select again."<< endl; 
+
+			}
+
+			break;
 			
+
 		case 5:
 			cout << "Thank you for Choosing Chase Fargo of America." << endl;
-			isNotFinished = false; //will quit the program
+			isNotFinished = false;
 			break;
 
 		default:
@@ -177,10 +189,10 @@ int main()
 			break;
 		}
 
-	} while (isNotFinished); // loop while until user exits
+	} while (isNotFinished);
 
 
-	system("pause"); 
+	system("pause");
 	return 0;
 
 }
