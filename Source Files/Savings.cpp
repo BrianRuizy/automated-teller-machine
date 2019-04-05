@@ -15,13 +15,13 @@ double Savings::getSavingsBalance() const
 
 void Savings::setWithdraw()
 {
-	int wdraw = 0;
-	cout << "Enter withdrawal amount: ";
+	double wdraw = 0;
+	cout << "Enter withdrawal amount: $";
 	cin >> wdraw;
 
 	if (s_balance >= wdraw) {
 		s_balance = s_balance - wdraw;
-		cout << "Your updated Checkings balance is: " << s_balance << endl;
+		cout << "Your updated Checkings balance is: $" << s_balance << endl;
 	}
 	else {
 		cout << "Not able to withdraw $" << wdraw << " from account." << endl;
@@ -31,17 +31,17 @@ void Savings::setWithdraw()
 
 void Savings::setDeposit()
 {
-	int dep = 0;
-	cout << "Enter deposit amount: ";
+	double dep = 0;
+	cout << "Enter deposit amount: $";
 	cin >> dep;
 	s_balance = s_balance + dep;
-	cout << "Your updated Savings balance is: " << getSavingsBalance() << endl;
+	cout << "Your updated Savings balance is: $" << getSavingsBalance() << endl;
 }
 
 double Savings::getTransfer() // returns transfer ammount
 {
-	int wdraw = 0;
-	cout << "Enter transfer amount: ";
+	double wdraw = 0;
+	cout << "Enter transfer amount: $";
 	cin >> wdraw;
 
 	if (s_balance >= wdraw) {
