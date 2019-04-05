@@ -5,7 +5,6 @@
 void Savings::setSavingsBalance(double deposit)
 {
 	s_balance = s_balance + deposit;
-	cout << "Your updated savings balance: $" << s_balance << endl;
 }
 
 
@@ -14,14 +13,10 @@ double Savings::getSavingsBalance() const
 	return s_balance;
 }
 
-double Savings::displaySavingsBalance() const
-{
-	return s_balance; 
-}
 void Savings::setWithdraw()
 {
 	int wdraw = 0;
-	cout << "Enter withdrawl amount: ";
+	cout << "Enter withdrawal amount: ";
 	cin >> wdraw;
 
 	if (s_balance >= wdraw) {
