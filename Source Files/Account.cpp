@@ -1,6 +1,8 @@
+// Gets account information
 #include "Account.h"
 #include <string>
 #include <iostream>
+
 using namespace std; ;
 
 void  Account::setAccountName(string firstname, string lastname)
@@ -28,17 +30,15 @@ bool Account::login() //loging verification with predefined credentials
 	bool isPinInvalid = true;
 
 	cout << "-----------------------------" << endl;
-	cout << "|          Welcome!          |" << endl;
+	cout << "|          Welcome!         |" << endl;
 	cout << "-----------------------------" << endl;
 
-	while (isAccountInvalid) 
-  {
+	while (isAccountInvalid) {
 
 		cout << "Please enter your account number: ";
 		cin >> givenAccountNumber;
 
-		if (givenAccountNumber == accountNumber) 
-    {
+		if (givenAccountNumber == accountNumber) {
 			isAccountInvalid = false;
 		}
 		else {
@@ -46,8 +46,7 @@ bool Account::login() //loging verification with predefined credentials
 		}
 	}
 
-	while (isPinInvalid) 
-  {
+	while (isPinInvalid) {
 
 		cout << "\nEnter your PIN: ";
 		cin >> givenPinNumber;
@@ -60,6 +59,6 @@ bool Account::login() //loging verification with predefined credentials
 		}
 	}
 
-	return true;//}
+	return true;
 
 }
