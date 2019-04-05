@@ -9,7 +9,6 @@ private:
 public:
 	void setSavingsBalance(double Balance);
 	double getSavingsBalance() const;
-	double displaySavingsBalance() const; // Edit
 	void setWithdraw();
 	void setDeposit();
 	double getTransfer();
