@@ -1,14 +1,13 @@
+///////////////////////////////////     Automated Teller Machine     ///////////////////////////////////  
 /*
+COSC 3304
+Moiz Ahmed
+
 TEAM MEMBERS:
 Brian Ruiz
 Kaeleb Teka
 Sebastian Maya
-
-Group University Project, for CS 3304 Algorithms & Data Structures, 
-with the goal to develop a software that acts as an ATM machine with OOP.
-
 */
-
 
 #include <iostream>
 #include <string>
@@ -37,7 +36,6 @@ int mainMenu() { //function for main menu interface
 	return choice;
 }
 
-
 int main()
 {
 	//class-objects instantiation
@@ -45,9 +43,9 @@ int main()
 	Checkings checkObj;
 	Savings savObj;
 
-	accObj.login(); //call for login page
+	//accObj.login(); //call for login page
 
-	accObj.setAccountName("Moiz", "Ahmed"); // Or whatever predefined name
+	accObj.setAccountName("John", "Smith"); // Or whatever predefined name
 	string fullName = accObj.getAccountName();
 
 	cout << "-----------------------------" << endl;
@@ -62,10 +60,11 @@ int main()
 
 	//loop through menu until user hits exit
 	do {
-		switch (mainMenu()) {
-
+		switch (mainMenu()) 
+		{
+			// call deposit function
 		case 1:
-    	cout << "-------------------------------------------------" << endl;
+			cout << "-------------------------------------------------" << endl;
 			cout << "| Which account would you like to deposit into? |" << endl;
 			cout << "-------------------------------------------------" << endl;
 			cout << "| 1. Checking                                   |" << endl;
@@ -74,19 +73,22 @@ int main()
 
 			cin >> accountChoice;
 			switch (accountChoice) { //nested switch case to chose account type
-				case 1:
-					checkObj.setDeposit();
-					break;
-				case 2:
-					savObj.setDeposit(); 
-					break;
-				default:
-					cout << "Invalid choice! Please select again." << endl;
-					break;
-				}
+			case 1:
+				checkObj.setDeposit();
+				break;
+			case 2:
+				savObj.setDeposit();
+				break;
+			default:
+				cout << "Invalid choice! Please select again." << endl;
+				break;
+			}
+
+			
 			break;
 
-		case 2: // call deposit function
+			// call widthdraw
+		case 2:
 			cout << "-------------------------------------------------" << endl;
 			cout << "|       Which account to widthdrwaw from?       |" << endl;
 			cout << "-------------------------------------------------" << endl;
@@ -96,79 +98,82 @@ int main()
 
 			cin >> accountChoice;
 			switch (accountChoice) { //nested switch case to chose account type
-				case 1:
-					checkObj.setWithdraw();
-					break;
-				case 2:
-					savObj.setWithdraw();
-					break;
-				default:
-					cout << "Invalid choice! Please select again." << endl;
-					break;
-				}
-			
+			case 1:
+				checkObj.setWithdraw();
+				break;
+			case 2:
+				savObj.setWithdraw();
+				break;
+			default:
+				cout << "Invalid choice! Please select again." << endl;
+				break;
+			}
+		
 			break;
-		case 3: // call widthdraw
-	
+		case 3:
+
 			// call to check balance
 			cout << "-------------------------------------------------" << endl;
 			cout << "|       Check Account Balance for?              |" << endl;
 			cout << "-------------------------------------------------" << endl;
 			cout << "| 1. Checking                                   |" << endl;
 			cout << "| 2. Savings                                    |" << endl;
+			//cout << "| 3. Checking & Savings                         |" << endl;  Modular case (Not needed here)
 			cout << "-------------------------------------------------" << endl;
-			
+
 			cin >> accountChoice;
 			switch (accountChoice)
 			{
-				case 1: 
-					cout << "Your current Checking balance is $" << checkObj.getBalance(); // gets balance for checkings account
-					break; 
+			case 1:
+				cout << "Your current Checking balance is $" << checkObj.getBalance(); // gets balance for checkings account
+				break;
 
-				case 2: 
-					cout << "Your current Savings balance is $" << savObj.getSavingsBalance(); // gets balance for savings account
-					break;
-					
-				default: 
-					cout << "Invalid choice! Please select again." << endl; 
-					break; 
+			case 2:
+				cout << "Your current Savings balance is $" << savObj.getSavingsBalance(); // gets balance for savings account
+				break;
 
-				}
+			default:
+				cout << "Invalid choice! Please select again." << endl;
+				break;
+
+			}
+
 			break;
 
-			
-		case 4: // call for transfer
+
+			// call for transfer
+		case 4:
 
 			cout << "-------------------------------------------------" << endl;
-			cout << "| Select account you wish to transer from.      |" << endl;
+			cout << "| Select account you wish to transer from.       |" << endl;
 			cout << "-------------------------------------------------" << endl;
-			cout << "| 1. Checkings to Savings                       |" << endl;
-			cout << "| 2. Savings to Checkings                       |" << endl;
+			cout << "| 1. Checkings to Savings                                   |" << endl;
+			cout << "| 2. Savings to Checkings                                    |" << endl;
 			cout << "-------------------------------------------------" << endl << endl;
 
 			cin >> accountChoice;
 			switch (accountChoice)
 			{
-				case 1: 
-				{
-					double depositTOsav = checkObj.getTransfer(); // Withdraw ammount from Checking
-					savObj.setSavingsBalance(depositTOsav); // Deposit ammount to Savings
-					break;
-				}
-				case 2: 
-				{
-					double depositTOcheck = savObj.getTransfer(); // Withdraw ammount from Savings
-					checkObj.setBalance(depositTOcheck); // Deposit ammount to Checkings
-					break;
-				}
-				default: 
-					cout << " Invalid choice! Please select again."<< endl; 
+			case 1:
+			{
+				double depositTOsav = checkObj.getTransfer(); // Withdraw ammount from Checking
+				savObj.setSavingsBalance(depositTOsav); // Deposit ammount to Savings
+				break;
+			}
+			case 2:
+			{
+				double depositTOcheck = savObj.getTransfer(); // Withdraw ammount from Savings
+				checkObj.setBalance(depositTOcheck); // Deposit ammount to Checkings
+				break;
+			}
+			default:
+				cout << " Invalid choice! Please select again." << endl;
 
-				}
+			}
 
 			break;
-			
 
+			// Call for EXIT on menu.
 		case 5:
 			cout << "Thank you for Choosing Chase Fargo of America." << endl;
 			isNotFinished = false;
