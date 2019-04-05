@@ -1,5 +1,0 @@
-so
-All I needed to do was the last two siwtch cases: 
-3 and 4 
-but I got confused for a second
- I think we ned to create an aditional class to handle the transfer of money?
