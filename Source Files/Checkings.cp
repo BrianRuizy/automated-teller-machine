@@ -1,23 +1,15 @@
 #include "Checkings.h"
 #include <iostream>
-#include "Savings.h"
 
 
 void Checkings::setBalance(double deposit)
 {
 	c_balance = c_balance + deposit;
-	cout << "Your updated checking balance: $" << c_balance << endl;
 }
 
 double Checkings::getBalance() const
 {
 	return c_balance;
-}
-
-// Show Balance command
-double  Checkings::dislpayCheckingsBalance() const
-{
-	return c_balance; 
 }
 
 void Checkings::setWithdraw()
