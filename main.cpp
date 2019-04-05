@@ -5,7 +5,7 @@ Moiz Ahmed
 
 TEAM MEMBERS:
 Brian Ruiz
-Kaeleb Teka
+Kaleab Teka
 Sebastian Maya
 */
 
