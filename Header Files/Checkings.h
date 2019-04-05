@@ -15,4 +15,3 @@ class Checkings : public Account  //inheritence from base class 'account'
 	double getTransfer();
     
 };
-
