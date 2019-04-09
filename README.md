@@ -12,7 +12,7 @@ The broader scope of this project is to practice and showcase our understanding 
 # Dependencies 
 * C++ IDE
 * iostream
-* iomanip
+* Understanding of OOP concepts
 
 # Result
 Asking user to login...
