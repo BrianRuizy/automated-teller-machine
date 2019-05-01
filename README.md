@@ -1,4 +1,4 @@
-# automated-teller-machine (ATM)
+# automated-teller-machine (ATM) 🏧
 Group University Project, for CS 3304 Algorithms & Data Structures, with the goal to develop a runtime software that acts as an ATM machine for a user with the use of OOP.
 
 # About
