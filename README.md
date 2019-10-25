@@ -9,9 +9,8 @@ The broader scope of this project is to practice and showcase our understanding 
 * Kaeleb - Programmer, developed header & implementation files.
 * Sebastian - Programmer, helped develop 'main' user interface
 
-# Dependencies 
+# Requirements 
 * C++ IDE
-* iostream
 * Understanding of OOP concepts
 
 # Result
